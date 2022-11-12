@@ -1,0 +1,23 @@
+public class autobox {
+
+    public static void main( String []Args){
+        int a=10;
+        float b=5;
+        String c="abhi";
+
+        System.out.println("normal value of a is"+" "+ a);
+        System.out.println("normal value of a is"+ " "+b);
+        System.out.println("normal value of a is"+ " " +c);
+
+        System.out.println("These values are wrap to form autobox");
+
+        Integer intobj =a;
+        Float floatobj=b;
+        String Stringobj=c;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+
+
+    }
+}
