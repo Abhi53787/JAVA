@@ -1,0 +1,29 @@
+import java.util.*;
+public class functions {
+
+//    public static void MyName(int a,int b){
+//        System.out.println("The answer is "+(a*b));
+//
+//    }
+    public static void printfactorial(int a){
+        int factorial = 1;
+        for(int i=a;i>=1;i--){
+            factorial = factorial*i;
+
+        }
+        System.out.println(factorial);
+    }
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value for a ");
+        int a=sc.nextInt();
+        printfactorial(a);
+
+//        int a = sc.nextInt();
+//        System.out.println("enter the value for b");
+//        int b = sc.nextInt();
+//        MyName(a,b);
+
+    }
+}
+
