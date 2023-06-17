@@ -1,0 +1,10 @@
+public class whileloop {
+    public static void main (String args[]){
+        System.out.println("gfsdf");
+        int a=5;
+
+        do {
+            System.out.println("Hello to Git ");
+        }while (true);
+    }
+}
