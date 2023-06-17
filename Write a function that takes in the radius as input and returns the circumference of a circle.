@@ -1,0 +1,15 @@
+import java.util.*;
+public class homework {
+    public static void circle(int r){
+       double pi =3.14;
+       double cir=(2*pi*r);
+        System.out.println(cir);
+    }
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of r");
+        int r = sc.nextByte();
+        circle(r);
+    }
+
+}
