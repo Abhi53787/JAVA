@@ -1,0 +1,30 @@
+import java.util.*;
+public class fibonacci {
+    public static void fibo(int a){
+        if(a<=0){
+            System.out.println("Enter valid number");
+
+        } else if (a==1) {
+            System.out.println(a);
+
+        }else {
+            System.out.println("The fibonacci series");
+            int n1=0;
+            int n2=1;
+            int count=0;
+            while(count<a){
+                System.out.println(n1);
+                int nth = n1+n2;
+                n1=n2;
+                n2=nth;
+                count++;
+            }
+        }
+
+    } public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int a=sc.nextInt();
+        fibo(a);
+    }
+}
