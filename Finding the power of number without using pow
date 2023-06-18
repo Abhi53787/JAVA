@@ -1,0 +1,33 @@
+import java.util.*;
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello, World!");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter a number to find the power");
+
+        int a=sc.nextInt();
+
+        System.out.println("enter the value of power");
+
+        
+
+        int b=sc.nextInt();
+
+        int c=1; 
+
+        for(int i=1;i<=b;i++){
+
+            c=c*a;
+
+           
+
+        }System.out.println("The power of given number is "+c);
+
+    }
+
+}
