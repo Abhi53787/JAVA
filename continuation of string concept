@@ -1,0 +1,22 @@
+import java.util.*;
+
+
+public class stringhw {
+   public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+       int size2=0;
+       System.out.println("Enter the number that u r willing to add into array");
+       int size=sc.nextInt();
+       String []size1=new String[size];
+       for (int i=0;i<size;i++){
+           System.out.println("");
+           size1[i]=sc.next();
+           size2 += size1[i].length();
+
+
+       }
+       for (int i=0;i<size;i++){
+           System.out.println(size1[i]);
+
+       }
+       System.out.println("The lenght of the array "+size2);
