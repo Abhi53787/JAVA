@@ -1,0 +1,31 @@
+import java.util.*;
+public class addusingconca {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of items that you want to store in array");
+        int num =sc.nextInt();
+        int[] num1=new int[num];
+        System.out.println("Enter the nums that contain size of "+num);
+        for (int i = 0; i < num; i++) {
+            System.out.println("Enter a number");
+            num1[i]=sc.nextInt();
+
+
+
+        }
+//        for (int i = 0; i < num; i++) {
+//            System.out.println(num1[i]);
+//
+//        }
+        System.out.println("Converting array to string and calling through charat");
+        String valid =Arrays.toString(num1);
+
+        char u = valid.charAt(7);
+
+        System.out.println(valid);
+        System.out.println("The char one is");
+        System.out.println(u);
+
+
+    }
+}
