@@ -1,0 +1,14 @@
+public class stringhw {
+   public static void main(String args[]) {
+int num = 43523;
+       String voi = Integer.toString(num);
+       System.out.println(voi);
+       System.out.println(voi.length());
+
+       String nw="846939";
+       System.out.println(nw);
+       int num2 = Integer.parseInt(nw);
+
+       System.out.println(nw);
+    }
+}
