@@ -1,0 +1,38 @@
+import java.util.*;
+public class fizzbizz {
+    public static void obi(int n){
+
+        for(int i=1;i<=n;i++){
+            if (i%3==0) {
+
+
+                System.out.print("Fizz");
+
+
+            }
+                if (i%5==0) {
+                    System.out.print("Bizz");
+//                System.out.println();
+
+
+                 }
+                else if (i%3!=0) {
+                    System.out.print(i);
+                }
+                System.out.println();
+
+        }
+
+
+
+    }
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Welcome to FizzBizz program");
+        System.out.println("Enter any number except 0");
+        int n=sc.nextInt();
+
+        obi(n);
+
+    }
+}
