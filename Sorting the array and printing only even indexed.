@@ -1,6 +1,6 @@
 public class bubblesort {
     public static void main(String args[]){
-        System.out.println("retr");
+        System.out.println("Sorting the array using bubble sort algorithm & Even_Indexed");
         int arr[]={9,6,8,4,2,3,5,7,1,};
 
         for(int i=0;i<arr.length-1;i++) {
