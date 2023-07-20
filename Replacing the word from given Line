@@ -1,0 +1,11 @@
+
+
+class Replacing string {
+    public static void main(String[] args) {
+        String str="Delhi is  Delhi cool";
+        String sub="Delhi";
+        String newstr="Banglore";
+         String repstr = str.replace(sub, newstr);
+         System.out.print(repstr);
+    }
+}
