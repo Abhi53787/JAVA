@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        System.out.println("Finding the no.of sum of even numbers");
+        System.out.println("Enter a digit to find the total even numbers");
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        int count=0;
+        for(int i=0;i<=n;i++){
+            if (i%2==0){
+                count+=i;
+            }
+            
+        }
+        System.out.println("Sum of even numbers "+count);
+    }
+}
