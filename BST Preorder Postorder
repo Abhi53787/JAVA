@@ -1,0 +1,143 @@
+//BST insert, delete, Tree Traversal 
+import java.io.*;
+class TNode
+{
+	int data;
+	TNode  left;
+	
+    TNode right;
+	
+	TNode(int d)
+	{  
+		data=d;
+	}
+ }
+ 
+public class BST{
+ 
+	TNode root;
+	
+	TNode insert(int d,TNode root)
+	{
+	  if(root==null)
+	    	root=new TNode(d);
+      else if(d<=root.data)
+		root.left=insert(d,root.left);
+	  else
+		root.right=insert(d,root.right);
+          return root;
+	}
+	
+	TNode search(int d,TNode root)
+	{
+		if(root.data==d)
+			return root;
+		else if(d<root.data)
+			return search(d,root.left);
+	    else
+			return search(d,root.right);
+	}
+
+	void inorder(TNode r)
+	{
+		if(r==null)
+		    return;
+		inorder(r.left);
+		System.out.println(r.data);
+		inorder(r.right);
+	}
+	void preorder(TNode r) {
+    if (r == null)
+        return;
+    System.out.println(r.data);
+    preorder(r.left);
+    preorder(r.right);
+	}
+	
+	void postorder(TNode r) {
+    if (r == null)
+        return;
+
+    postorder(r.left);
+    postorder(r.right);
+    System.out.println(r.data);
+	}
+     
+
+
+
+   
+
+	TNode delete(TNode root, int data)
+	{ 
+        	if (root == null)  return root; 
+ 	        if (data < root.data) 
+            		root.left = delete(root.left, data); 
+        	else if (data > root.data) 
+            		root.right = delete(root.right, data); 
+  
+        	else
+        	{ 
+            	        if (root.left == null) 
+                		return root.right; 
+		        else if (root.right == null) 
+                		return root.left; 
+		        root.data = minValue(root.right); 
+  	                root.right = delete(root.right, root.data); 
+        	} 
+          return root; 
+       } 	
+
+   int minValue(TNode root) 
+    { 
+        int minv = root.data; 
+        while (root.left != null) 
+        { 
+            minv = root.left.data; 
+            root = root.left; 
+        } 
+        return minv; 
+    } 
+
+   
+   public static void main(String[] args)	// need to read the values from KB
+   {
+		BST ob=new BST();
+		ob.root=ob.insert(50,ob.root); 
+	 
+        ob.root=ob.insert(30,ob.root); 
+        ob.root=ob.insert(20,ob.root); 
+        ob.root=ob.insert(20,ob.root); 
+        ob.root=ob.insert(70,ob.root); 
+        ob.root=ob.insert(60,ob.root); 
+        ob.root=ob.insert(80,ob.root);
+    
+		ob.root=ob.delete(ob.root,50);
+		System.out.println("**ROOT **" +ob.root.data);
+		
+		
+		System.out.println("**Tree printed using PREORDER **");
+        ob.preorder(ob.root);
+        System.out.println("POSTORDER");
+        ob.postorder(ob.root);
+
+		
+		TNode find=ob.search(30,ob.root);
+		System.out.println("**Searching for 30 in the tree**" );
+		
+		if(find==null)
+			System.out.println("not found");
+		else
+			System.out.println("found : "+find.data);
+		
+		find=ob.search(30,ob.root);
+		System.out.println("**Searching for 305 in the tree**" );
+		
+		if(find==null)
+			System.out.println("not found");
+		else
+			System.out.println("found : "+find.data);
+	
+		
+	}
+}
