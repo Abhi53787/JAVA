@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static int deci(String bin){
+        int de=Integer.parseInt(bin,2);
+        
+        return de;
+        
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        String a= sc.nextLine();
+        System.out.println("Binary to decimal is " + deci(a));
+        
+    }
+    
+}
