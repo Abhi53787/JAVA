@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static boolean armstrongnumberandchecking(int n){
+        int original = n;
+        int rev=0;
+        while(n!=0){
+            int rem=n%10;
+            rev=rev+(rem*rem*rem);
+            n/=10;
+        }
+        return original==rev;
+        
+        
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int num=sc.nextInt();
+        System.out.println(" given number is "+armstrongnumberandchecking(num)+"Armstrong");
+        
+    }
+}
