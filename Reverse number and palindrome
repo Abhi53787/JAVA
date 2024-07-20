@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main{
+    public static int reverse(int n ){
+        int rev=0;
+        int ori=n;
+        while(n!=0){
+            int rem=n%10;
+            rev=rev*10+rem;
+            n=n/10;
+        }
+        if (ori==rev){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not a palindrome ");
+        }
+        
+        return rev;
+        
+    }
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        
+            
+        System.out.println("Enter a number to reverse");
+        int m= sc.nextInt();
+        System.out.println("The reversed number of "+ m +" is "+ reverse(m));
+        
+        
+        
+    }
+}
