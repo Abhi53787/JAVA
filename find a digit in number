@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main{
+    public static void Count(String n, String l){
+        char find = l.charAt(0);
+        boolean found=false;
+        for (int i=0;i<n.length() ;i++ ){
+            if(find==n.charAt(i)){
+                found= true;
+                break;
+            }
+        }if(found){
+            System.out.println(l+" is   present in "+ n);
+            
+        }else{
+            System.out.println(l+" is not present in "+ n);
+        }
+        
+        
+    }
+    public static void main(String [] args){
+        System.out.print("Enter a number to be checked");
+        Scanner sc= new Scanner(System.in);
+        String m=sc.nextLine();
+        System.out.println("Enter a number to find");
+        String a=sc.nextLine();
+        Count(m,a);
+    }
+}
